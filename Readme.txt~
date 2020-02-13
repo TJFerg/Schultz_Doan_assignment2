@@ -1,0 +1,46 @@
+CSCI 2720
+
+Assignnment 1: Introduction to C++ Programming
+
+README
+==============================================
+
+Group members
+-------------
+Austin Schultz - als93978@uga.edu
+       * Contributions: Worked on and completed Student class,
+       Instructor class, and Main.
+
+David Doan - dd67391@uga.edu
+       * Contributions: Worked on and completed the Instructor class.
+       We had to use Austin's code for the Instructor class due to a time issue,
+       but this shouldn't penalize him because he completed the code.
+
+Compiling
+---------
+Ensure you are in the correct assignment directory (Schultz-Doan-assignment1).
+
+Then simply run:
+make compile
+
+gcc version 6.2.0 was used to compile for testing.
+
+To compile manually, run the following:
+g++ -g -Wall -O0 -pedantic-errors -o main Student.cpp Instructor.cpp main.cpp 
+
+To run
+------
+Simply run:
+make run
+
+To run manually, run the following:
+./main instructors.txt students.txt
+
+After running
+-------------
+If you want, you can run the following:
+make clean
+
+Or, run: rm main.
+
+This deletes the 'main' executable file.
