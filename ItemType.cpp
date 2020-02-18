@@ -29,3 +29,7 @@ int ItemType::getValue() const {
 void ItemType::initialize(int num) {
     this -> value = num;
 }
+
+int main() {
+    return EXIT_SUCCESS;
+}
