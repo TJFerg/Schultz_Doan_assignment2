@@ -22,7 +22,7 @@ Comparison ItemType::compareTo(ItemType item) {
     }
 }
 
-int ItemType::getValue() {
+int ItemType::getValue() const {
     return value;
 }
 
