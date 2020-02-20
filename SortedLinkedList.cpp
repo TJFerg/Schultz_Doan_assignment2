@@ -117,7 +117,7 @@ void SortedLinkedList::deleteItem(ItemType item) {
 }
 
 void SortedLinkedList::deleteItem(int index) {
-    
+    deleteItem(searchItem(index));
 }
 
 int SortedLinkedList::searchItem(ItemType item) {
