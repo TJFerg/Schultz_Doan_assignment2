@@ -82,11 +82,48 @@ int main(int argc, char * argv[]) {
     // bool loop = true;
     // char character;
 
-    // while (loop) {
-    // 	cout << "Enter a command: ";
-    // 	cin >> character;
-    // 	switch (character) {
-    // 	case 'i':
-    // 	    char data[100];
-    // 	    fgets(data, 100, stdin);
+    while (loop) {
+    	cout << "Enter a command: ";
+    	cin >> character;
+    	switch (character) {
+    	case 'i':
+    	    char data[100];
+    	    fgets(data, 100, stdin);
+	    cout << "Enter number: ";
+	    string number;
+	    cin >> number;
+	    break;
+	case 'd':
+	    int value = 0;
+	    cout << "Enter value to delete: ";
+	    cin >> value;
+	    break;
+	case 's':
+	    cout << "Enter value to search: ";
+	    string searchNum;
+	    cin >> searchNum;
+	    break;
+	case 'n':
+	    break;
+	case 'r':
+	    cout << "Iterator reset." endl;
+	    break;
+	case 'p':
+	    break;
+	case 'l':
+	    cout << "List Length is " << endl;
+	    break;
+	case 'b':
+	    cout << "Before" << endl;
+	    cout << "After" << endl;
+	    break;
+	case 'q':
+	    cout << "Quitting program..." endl;
+	    loop = false;
+	    break;
+	default:
+	    cout << "Invalid command, try again!" << endl;
+	    break;
+	}
+    }
 }
