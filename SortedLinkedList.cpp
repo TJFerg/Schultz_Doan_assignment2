@@ -57,14 +57,46 @@ void SortedLinkedList::insertItem(ItemType item) {
 }
 
 void SortedLinkedList::deleteItem(ItemType item) {
-    // ListNode* prev = nullptr;
-    // ListNode* current = head;
+    ListNode* prev = nullptr;
+    ListNode* current = head;
 
+    if(head == nullptr) { // list is empty
+	cout << "You cannot delete from an empty list" << endl;
+
+	return;
+    }
+
+    bool isFound = false;
+    while(current != nullptr) {
+	if(item.compareTo(current->item) == GREATER) {
+	    prev = current;
+	    current = current->next;
+	}
+
+	else if(item.compareTo(current->item) == EQUAL) {
+	    isFound = true;
+	    
+	    break;
+	}
+
+	else
+	    break;
+    }
+
+    if(isFound) {
+	prev->next = current->next;
     
+	lengthValue--;
+   
+	delete current;
+    }
+
+    else
+	cout << "Item not found" << endl;
 }
 
 void SortedLinkedList::deleteItem(int index) {
-
+    
 }
 
 int SortedLinkedList::searchItem(ItemType item) {

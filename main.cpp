@@ -43,16 +43,24 @@ int main(int argc, char * argv[]) {
 
     ItemType item5;
     item5.initialize(3);
+
+    ItemType item6;
+    item6.initialize(9);
     
     list.insertItem(item1);
     list.insertItem(item2);
     list.insertItem(item3);
     list.insertItem(item4);
     list.insertItem(item5);
+    list.insertItem(item6);
+    list.insertItem(item6);
+    list.insertItem(item6);
     
     list.printList();
 
-    cout << list.searchItem(item1) << endl;
+    list.deleteItem(item6);
+
+    list.printList();
     
     // SortedLinkedList list;
     // ItemType item;
