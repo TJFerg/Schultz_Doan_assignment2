@@ -13,6 +13,7 @@ class SortedLinkedList {
     void deleteItem(ItemType item);
     void deleteItem(int index);
     int searchItem(ItemType item);
+    ItemType searchItem(int index);
     ItemType GetNextItem();
     void ResetList();
     void reverse();
@@ -21,6 +22,7 @@ class SortedLinkedList {
  private:
     ListNode* head;
     ListNode* currentPos;
+    int lengthValue;
 };
 
 #endif
