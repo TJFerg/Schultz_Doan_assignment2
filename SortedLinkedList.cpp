@@ -66,6 +66,27 @@ void SortedLinkedList::deleteItem(ItemType item) {
 	return;
     }
 
+    if(item.compareTo(current->item) == EQUAL) { // deleting the first item
+	head = current->next;
+
+	lengthValue--;
+
+	delete current;
+
+	return;
+    }
+
+    // deleting the only item
+    if((item.compareTo(current->item) == EQUAL) && (current->next == nullptr)) {
+	lengthValue--;
+
+	delete current;
+
+	head = nullptr;
+
+	return;
+    }
+    
     bool isFound = false;
     while(current != nullptr) {
 	if(item.compareTo(current->item) == GREATER) {

@@ -10,55 +10,40 @@ int main(int argc, char * argv[]) {
     SortedLinkedList list;
 
     // ItemType item1;
-    // item1.initialize(1);
+    // item1.initialize(45);
+
     // ItemType item2;
     // item2.initialize(2);
+
     // ItemType item3;
     // item3.initialize(4);
+
     // ItemType item4;
-    // item4.initialize(0);
+    // item4.initialize(-5);
+
     // ItemType item5;
-    // item5.initialize(-1);
-    // ItemType item6;
-    // item6.initialize(3);
+    // item5.initialize(3);
 
     // list.insertItem(item1);
     // list.insertItem(item2);
     // list.insertItem(item3);
     // list.insertItem(item4);
     // list.insertItem(item5);
-    // list.insertItem(item6);
-
-    ItemType item1;
-    item1.initialize(45);
-
-    ItemType item2;
-    item2.initialize(2);
-
-    ItemType item3;
-    item3.initialize(4);
-
-    ItemType item4;
-    item4.initialize(-5);
-
-    ItemType item5;
-    item5.initialize(3);
-
-    ItemType item6;
-    item6.initialize(9);
     
-    list.insertItem(item1);
-    list.insertItem(item2);
-    list.insertItem(item3);
-    list.insertItem(item4);
-    list.insertItem(item5);
-    list.insertItem(item6);
-    list.insertItem(item6);
-    list.insertItem(item6);
-    
+    // list.printList();
+
+    // list.deleteItem(item4);
+
+    // list.printList();
+
+    ItemType item;
+    item.initialize(5);
+
+    list.insertItem(item);
+
     list.printList();
 
-    list.deleteItem(item6);
+    list.deleteItem(item);
 
     list.printList();
     
