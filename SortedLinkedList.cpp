@@ -11,7 +11,13 @@ SortedLinkedList::SortedLinkedList() {
 }
 
 SortedLinkedList::~SortedLinkedList() {
+    ListNode* current;
 
+    while(head != nullptr) {
+	current = head;
+	head = head->next;
+	delete current;
+    }
 }
 
 int SortedLinkedList::length() const {
