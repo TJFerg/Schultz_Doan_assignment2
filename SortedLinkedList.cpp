@@ -39,7 +39,7 @@ void SortedLinkedList::insertItem(ItemType item) {
 	}
 
 	else if(item.compareTo(current->item) == EQUAL) {
-	    cout << "Sorry. You cannot insert the duplicate item" << endl;
+	    cout << "\nSorry. You cannot insert the duplicate item\n" << endl;
 	    isDuplicate = true;
 	    break;
 	}
@@ -119,7 +119,7 @@ void SortedLinkedList::deleteItem(ItemType item) {
     }
 
     else
-	cout << "Item not found" << endl;
+	cout << "Item not found\n" << endl;
 }
 
 void SortedLinkedList::deleteItem(int index) {
@@ -143,7 +143,7 @@ int SortedLinkedList::searchItem(ItemType item) {
 	    break;
     }
 
-    cout << "Item not found" << endl;
+    cout << "Item not found\n" << endl;
 
     return -1;
 }

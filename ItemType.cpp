@@ -8,6 +8,10 @@ ItemType::ItemType() {
     value = 0;
 }
 
+ItemType::ItemType(int value) {
+    this -> value = value;
+}
+
 Comparison ItemType::compareTo(ItemType item) {
     if (this -> value > item.getValue()) {
 	return GREATER;
