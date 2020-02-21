@@ -203,7 +203,61 @@ void SortedLinkedList::ResetList() {
 }
 
 void SortedLinkedList::reverse() {
+    ListNode* prev = nullptr;
+    ListNode* current = head;
+    ListNode* firstItemTemp = nullptr;
+    
+    if(head == nullptr) { // list is empty
+	cout << "Cannot reverse, list is empty" << endl;
 
+	return;
+    }
+
+    if(head->next == nullptr) { // list only has one item
+	cout << "Cannot reverse, list has only one item" << endl;
+
+	return;
+    }
+
+    while(current->next != nullptr) { // go to end of list and assign appropriate pointers
+	prev = current;
+	current = current->next;
+    }
+
+    // make a temporary pointer to the first item (or the last item in the non-reversed version
+    firstItemTemp = current;
+
+    while(prev != nullptr) { // do the reversal
+	//cout << "current's value: " << current->item.getValue() << endl;
+	
+	current->next = prev;
+
+	current = prev;
+
+	//cout << "New current's prev value: " << findPrevNode(current)->item.getValue() << endl;
+	
+	prev = findPrevNode(current);
+    }
+
+    current->next = nullptr; // make the last item (used to be the first item) point to null
+
+    // now that the list is reversed, make head point to the first item (used to be the last item)
+    head = firstItemTemp;
+}
+
+ListNode* SortedLinkedList::findPrevNode(ListNode* node) {
+    ListNode* prev = nullptr;
+    ListNode* current = head;
+
+    while(current->next != nullptr) {
+	if(current == node)
+	    return prev;
+
+	prev = current;
+	current = current->next;
+    }
+
+    return prev;
 }
 
 void SortedLinkedList::printList() {

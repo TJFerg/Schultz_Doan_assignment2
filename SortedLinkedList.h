@@ -17,6 +17,8 @@ class SortedLinkedList {
     ItemType GetNextItem();
     void ResetList();
     void reverse();
+    ListNode* findPrevNode(ListNode* node);
+    ListNode* getLastNode();
     void printList();
     
  private:

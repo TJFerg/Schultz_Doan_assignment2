@@ -8,6 +8,35 @@ using namespace std;
 
 int main(int argc, char * argv[]) {
     SortedLinkedList list;
+
+    // SORTEDLINKEDLIST TESTING LIST:
+    // ItemType item1;
+    // item1.initialize(-5);
+    
+    // ItemType item2;
+    // item2.initialize(2);
+
+    // ItemType item3;
+    // item3.initialize(3);
+
+    // ItemType item4;
+    // item4.initialize(4);
+
+    // ItemType item5;
+    // item5.initialize(45);
+    
+    // list.insertItem(item1);
+    // list.insertItem(item2);
+    // list.insertItem(item3);
+    // list.insertItem(item4);
+    // list.insertItem(item5);
+
+    // list.printList();
+
+    // list.reverse();
+
+    // list.printList();
+    
     ItemType item;
     int input;
     fstream fs;
@@ -46,7 +75,7 @@ int main(int argc, char * argv[]) {
     	cout << "Enter a command: ";
     	cin >> character;
 
-	switch (character) {
+    	switch (character) {
     	case 'i': {
     	    char data[100];
     	    fgets(data, 100, stdin);
@@ -54,47 +83,47 @@ int main(int argc, char * argv[]) {
     	    string number;
     	    cin >> number;
     	    break;
-	}
+    	}
     	case 'd': {
     	    int value = 0;
     	    cout << "Enter value to delete: ";
     	    cin >> value;
     	    break;
-	}
+    	}
     	case 's': {
     	    cout << "Enter value to search: ";
     	    string searchNum;
     	    cin >> searchNum;
     	    break;
-	}
+    	}
     	case 'n': {
     	    break;
-	}
+    	}
     	case 'r': {
     	    cout << "Iterator reset." endl;
     	    break;
-	}
+    	}
     	case 'p': {
     	    break;
-	}
+    	}
     	case 'l': {
     	    cout << "List Length is " << endl;
     	    break;
-	}
+    	}
     	case 'b': {
     	    cout << "Before" << endl;
     	    cout << "After" << endl;
     	    break;
-	}
+    	}
     	case 'q': {
     	    cout << "Quitting program..." endl;
     	    loop = false;
     	    break;
-	}
+    	}
     	default: {
     	    cout << "Invalid command, try again!" << endl;
     	    break;
-	}
+    	}
     	}
     }
 }
