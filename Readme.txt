@@ -8,10 +8,11 @@ README
 Group members
 -------------
 Austin Schultz - als93978@uga.edu
-       * Contributions:
+       * Contributions: SortedLinkedList.h, SortedLinkedList.cpp, ListNode.h,
+       fixed some errors and memory leaks
        
 David Doan - dd67391@uga.edu
-       * Contributions: 
+       * Contributions: ItemType.h, ItemType.cpp, main.cpp, fixed some errors
 
 Compiling
 ---------
@@ -28,10 +29,11 @@ g++ -g -Wall -O0 -pedantic-errors -o main ItemType.cpp SortedLinkedList.cpp main
 To run
 ------
 Simply run:
-make run
+make run    **(note this only runs ./main input.txt)
 
 To run manually, run the following:
-./main
+./main input.txt
+or ./main empty.txt
 
 After running
 -------------
